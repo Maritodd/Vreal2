@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e6ffff;
+  padding: 0;
+}
+
+%btn-template {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: .3s ease-in;
+  &:hover {
+    box-shadow: 2.5px 2.5px 2.5px black;
+    transition: .3s ease-in;
+  }
+}
+
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  &-weather {
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+  &-unitBtn {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: end;
+    &__item {
+      @extend %btn-template;
+    }
+  }
+  &-langBtn {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    justify-self: end;
+    align-self: start;
+    &__item {
+      @extend %btn-template;
+
+    }
+  }
+}
+
+.weather-container {
+  font-size: 20px;
+  &__block {
+    display: flex;
+    width: 100%;
+    &_img {
+      width: 20%;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 28px
+  }
+  &__temp {
+    font-weight: 600;
+    font-size: 30px;
+    align-self: end;
+  }
+  &__item {
+    font-size: 17px;
+  }
+}
+
+.form {
+  &-input {
+    padding: 10px;
+    border: 1px solid black;
+  }
+  &-btn {
+    @extend %btn-template;
+  }
+}

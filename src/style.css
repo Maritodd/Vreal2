@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  background-color: #e6ffff;
+  padding: 0;
+}
+
+.form-btn, .App-langBtn__item, .App-unitBtn__item {
+  padding: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.form-btn:hover, .App-langBtn__item:hover, .App-unitBtn__item:hover {
+  box-shadow: 2.5px 2.5px 2.5px black;
+  transition: 0.3s ease-in;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.App-weather {
+  grid-column: 2/3;
+  grid-row: 2/5;
+}
+.App-unitBtn {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: end;
+}
+.App-langBtn {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  justify-self: end;
+  align-self: start;
+}
+.weather-container {
+  font-size: 20px;
+}
+.weather-container__block {
+  display: flex;
+  width: 100%;
+}
+.weather-container__block_img {
+  width: 20%;
+}
+.weather-container__name {
+  font-weight: 700;
+  font-size: 28px;
+}
+.weather-container__temp {
+  font-weight: 600;
+  font-size: 30px;
+  align-self: end;
+}
+.weather-container__item {
+  font-size: 17px;
+}
+
+.form-input {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */
